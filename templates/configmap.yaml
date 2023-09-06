@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: "{{ include "esap-api.fullname" . }}-settings"
+  name: "{{ include "esap.fullname" . }}-settings"
   labels:
-    {{- include "esap-api.labels" . | nindent 4 }}
+    {{- include "esap.labels" . | nindent 4 }}
 data:
   prod.py: |
     """
@@ -283,7 +283,7 @@ data:
         OIDC_OP_TOKEN_ENDPOINT = os.environ['OIDC_OP_TOKEN_ENDPOINT']
         OIDC_OP_USER_ENDPOINT = os.environ['OIDC_OP_USER_ENDPOINT']
         OIDC_AUTHENTICATION_CALLBACK_URL = os.environ['OIDC_AUTHENTICATION_CALLBACK_URL']
-        #"https://sdc-dev.astron.nl/esap-api/oidc/callback/"
+        #"https://sdc-dev.astron.nl/esap/oidc/callback/"
 
         LOGIN_REDIRECT_URL = os.environ['LOGIN_REDIRECT_URL']
         LOGOUT_REDIRECT_URL = os.environ['LOGOUT_REDIRECT_URL']
@@ -319,7 +319,7 @@ data:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
     # configuration settings that can be requested through the REST API
-    API_VERSION = "ESAP-API version 12 aug 2021"
+    API_VERSION = "esap version 12 aug 2021"
     CONFIGURATION_DIR = os.path.join(BASE_DIR, 'configuration')
     CONFIGURATION_FILE = 'esap_default'
 

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "test-helm.fullname" . }}
+  name: {{ include "esap.fullname" . }}
   labels:
-    {{- include "test-helm.labels" . | nindent 4 }}
+    {{- include "esap.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "test-helm.selectorLabels" . | nindent 6 }}
+      {{- include "esap.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,17 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "test-helm.selectorLabels" . | nindent 8 }}
+        {{- include "esap.selectorLabels" . | nindent 8 }}
     spec:
+      volumes:
+      - name: {{ include "esap.fullname" . }}-settings
+        configMap:
+          name: {{ include "esap.fullname" . }}-settings
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "test-helm.serviceAccountName" . }}
+      serviceAccountName: {{ include "esap.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -43,14 +47,32 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /esap-api/ida
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /esap-api/ida
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+          - name: SECRET_KEY
+            value: "{{ .Values.django_secret_key }}"
+          - name: RUCIO_HOST
+            value: "{{ .Values.rucio_host }}"
+          - name: RUCIO_AUTH_HOST
+            value: "{{ .Values.rucio_auth_host }}"
+          - name: RUCIO_AUTH_TOKEN
+            value: "{{ .Values.rucio_auth_token }}"
+          {{- range $key, $value := .Values.extraEnv }}
+          - name: {{ $key }}
+            value: {{ $value }}
+          {{- end }}
+          volumeMounts:
+          - name: {{ include "esap.fullname" . }}-settings
+            mountPath: /src/esap/settings/prod.py
+            subPath: prod.py
+            readOnly: true
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
