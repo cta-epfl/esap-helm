@@ -28,8 +28,6 @@ ingress:
         - esap.cta.cscs.ch
       secretName: esap-prod-cert
 
-esap_api_settings_kind: prod # dev
-
 extraEnv:
   OIDC_OP_JWKS_ENDPOINT: "OIDC_OP_JWKS_ENDPOINT"
   LOGIN_REDIRECT_URL: "https://esap-gui.test-cta-cscs.odahub.io/esap-gui/login"
