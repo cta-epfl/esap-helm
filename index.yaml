@@ -9,6 +9,6 @@ entries:
       name: esap
       type: application
       urls:
-        - https://github.com/cta-epfl/esap-helm/esap-0.1.0.tgz
+        - https://cta-epfl.github.io/esap-helm/esap-0.1.0.tgz
       version: 0.1.0
 generated: "2023-09-07T14:58:12.35106154+02:00"
