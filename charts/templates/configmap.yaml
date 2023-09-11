@@ -84,7 +84,7 @@ data:
         'ida',
         'batch',
         'knox',
-        # "uws",
+        "uws",
         'django.contrib.admin',
         'django.contrib.auth',
         'mozilla_django_oidc',
@@ -95,7 +95,7 @@ data:
         'rest_framework',
         'corsheaders',
         'django_filters',
-        # "django_bootstrap5",
+        "django_bootstrap5",
     ]
 
     #DATABASES = {
