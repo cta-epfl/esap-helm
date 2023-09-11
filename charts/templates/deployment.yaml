@@ -64,9 +64,8 @@ spec:
             value: "{{ .Values.rucio_auth_host }}"
           - name: RUCIO_AUTH_TOKEN
             value: "{{ .Values.rucio_auth_token }}"
-          {{- range $key, $value := .Values.extraEnv }}
-          - name: {{ $key }}
-            value: {{ $value }}
+          {{- with .Values.extraEnv }}
+          {{- . | toYaml | nindent 10 }}
           {{- end }}
           volumeMounts:
           - name: {{ include "esap.fullname" . }}-settings

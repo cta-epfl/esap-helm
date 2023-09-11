@@ -29,7 +29,12 @@ ingress:
       secretName: esap-prod-cert
 
 extraEnv:
-  OIDC_OP_JWKS_ENDPOINT: "OIDC_OP_JWKS_ENDPOINT"
-  LOGIN_REDIRECT_URL: "https://esap-gui.test-cta-cscs.odahub.io/esap-gui/login"
-  LOGOUT_REDIRECT_URL: "https://esap-gui.test-cta-cscs.odahub.io/esap-gui/logout"
-  LOGIN_REDIRECT_URL_FAILURE: ""
+  - OIDC_OP_JWKS_ENDPOINT: "OIDC_OP_JWKS_ENDPOINT"
+  - LOGIN_REDIRECT_URL: "https://esap-gui.test-cta-cscs.odahub.io/esap-gui/login"
+  - LOGOUT_REDIRECT_URL: "https://esap-gui.test-cta-cscs.odahub.io/esap-gui/logout"
+  - LOGIN_REDIRECT_URL_FAILURE:
+  - OIDC_RP_CLIENT_SECRET:
+    valueFrom:
+      secretKeyRef:
+        name: gitlab-ctao-secret
+        key: client.secret
