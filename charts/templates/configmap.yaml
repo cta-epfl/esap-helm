@@ -77,12 +77,14 @@ data:
     # Application definition
 
     INSTALLED_APPS = [
+        "sdc_portal.apps.SdcPortalConfig",
         'query.apps.MyAppConfig',
         'accounts',
         'rucio',
         'ida',
         'batch',
         'knox',
+        # "uws",
         'django.contrib.admin',
         'django.contrib.auth',
         'mozilla_django_oidc',
@@ -93,6 +95,7 @@ data:
         'rest_framework',
         'corsheaders',
         'django_filters',
+        # "django_bootstrap5",
     ]
 
     #DATABASES = {
@@ -122,7 +125,7 @@ data:
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [],
+            'DIRS': ['/src/sdc_portal/templates/sdc_portal'],
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
