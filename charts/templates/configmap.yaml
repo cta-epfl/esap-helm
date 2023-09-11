@@ -92,7 +92,6 @@ data:
         OIDC_OP_AUTHORIZATION_ENDPOINT = os.environ['OIDC_OP_AUTHORIZATION_ENDPOINT']
         OIDC_OP_TOKEN_ENDPOINT = os.environ['OIDC_OP_TOKEN_ENDPOINT']
         OIDC_OP_USER_ENDPOINT = os.environ['OIDC_OP_USER_ENDPOINT']
-        OIDC_AUTHENTICATION_CALLBACK_URL = os.environ['OIDC_AUTHENTICATION_CALLBACK_URL']
         #"https://sdc-dev.astron.nl/esap/oidc/callback/"
 
         LOGIN_REDIRECT_URL = os.environ['LOGIN_REDIRECT_URL']

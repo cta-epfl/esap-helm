@@ -3,7 +3,17 @@ entries:
   esap:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.938850848+02:00"
+    created: "2023-09-11T15:56:45.766116758+02:00"
+    description: A chart to deploy the ESAP project
+    digest: fbef39502ea0ea8374c8f4750bf5a9c32291c282623e18eb3906b6abc37661c7
+    name: esap
+    type: application
+    urls:
+    - https://cta-epfl.github.io/esap-helm/esap-0.2.9.tgz
+    version: 0.2.9
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-09-11T15:56:45.765333353+02:00"
     description: A chart to deploy the ESAP project
     digest: b58ae84aedb867c20c13a25e9c8603bcd5b7e0c9a637d32d6bd998630c9722ae
     name: esap
@@ -13,7 +23,7 @@ entries:
     version: 0.2.8
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.938054003+02:00"
+    created: "2023-09-11T15:56:45.764579549+02:00"
     description: A chart to deploy the ESAP project
     digest: 921fae3c9ce40f84be679d46626ef6ce9e7aff3f41bd221ee7e7c2dd4965cfcd
     name: esap
@@ -23,7 +33,7 @@ entries:
     version: 0.2.7
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.936981443+02:00"
+    created: "2023-09-11T15:56:45.763328441+02:00"
     description: A chart to deploy the ESAP project
     digest: 370b5258fea0b4258f9a760cfdeaa8adf9296c5c59e6c416f9a87b791a2c02b4
     name: esap
@@ -33,7 +43,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.935023334+02:00"
+    created: "2023-09-11T15:56:45.762551136+02:00"
     description: A chart to deploy the ESAP project
     digest: aa485c44233a9fb0024d89545b4bb56acc861d9663575aa99eb7c9fab9b7326b
     name: esap
@@ -43,7 +53,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.932567397+02:00"
+    created: "2023-09-11T15:56:45.761764031+02:00"
     description: A chart to deploy the ESAP project
     digest: a2d27a3b233224aabf525d539126844ed82b8fec6f6c71c5197091d820287aa7
     name: esap
@@ -53,7 +63,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.931270025+02:00"
+    created: "2023-09-11T15:56:45.760348722+02:00"
     description: A chart to deploy the ESAP project
     digest: 56b6b2e775c283c26921d0472794a800ad215dbc23777037e242fb3b52278410
     name: esap
@@ -63,7 +73,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.929082003+02:00"
+    created: "2023-09-11T15:56:45.759562717+02:00"
     description: A chart to deploy the ESAP project
     digest: 9873a1d041b52efcd762e4ae0bdd8deee115930aa4daf685cd9ab77c037bae0d
     name: esap
@@ -73,7 +83,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.927903637+02:00"
+    created: "2023-09-11T15:56:45.75852501+02:00"
     description: A chart to deploy the ESAP project
     digest: 71d11b27223686fa29a8a978916b431ef8394b82c3ea116864f069436a538226
     name: esap
@@ -83,7 +93,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.92669157+02:00"
+    created: "2023-09-11T15:56:45.7568948+02:00"
     description: A chart to deploy the ESAP project
     digest: 05b86f880496bb38a54b59ea3974385532791c666720a53ad58eb5db46a676cd
     name: esap
@@ -93,7 +103,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-11T14:32:32.925564907+02:00"
+    created: "2023-09-11T15:56:45.755379191+02:00"
     description: A Helm chart for Kubernetes
     digest: d1be3301215dba83819e2d237cb8b337d407086f9f7d9f6995215b897bc32f07
     name: esap
@@ -101,4 +111,4 @@ entries:
     urls:
     - https://cta-epfl.github.io/esap-helm/esap-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-11T14:32:32.924140427+02:00"
+generated: "2023-09-11T15:56:45.752869875+02:00"
