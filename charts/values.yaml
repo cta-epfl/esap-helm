@@ -8,7 +8,7 @@ image:
   repository: ph0tonic/esap
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0"
+  tag: "1.1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -100,3 +100,5 @@ extraEnv:
     value: https://esap-staging.cta.cscs.ch/sdc-portal/logout
   - name: LOGIN_REDIRECT_URL_FAILURE
     value: https://esap-staging.cta.cscs.ch/sdc-portal/error
+extraConfig: |
+  print("This is python code")
